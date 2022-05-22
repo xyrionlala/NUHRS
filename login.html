@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title> National University Health Record System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<!--include jquery plugin-->
+    <script src="javascript/jquery-ui-1.12.1/external/jquery/jquery.js" type="text/javascript"></script>
+    <script src="javascript/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+    <link href="javascript/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css">
+
+<!--include bootstrap-->
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!--include alertify plugin-->
+    <link href="javascript/alertifyjs/css/alertify.min.css" rel="stylesheet" type="text/css">
+    <link href="javascript/alertifyjs/css/themes/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="javascript/alertifyjs/css/override.css" rel="stylesheet" type="text/css">
+    <script src="javascript/alertifyjs/alertify.min.js"></script>
+    <script src="javascript/alertifyjs/override.js"></script>
+
+<!-- Include Selectize -->
+    <script src="javascript/selectize/dist/js/standalone/selectize.js" type="text/javascript"></script>
+    <link href="javascript/selectize/dist/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<!--include other plugins-->
+    <script src="javascript/moment.min.js" type="text/javascript"></script>
+    <link href="css/ionicons/docs/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+    <script src="javascript/jsconfig.min.js" type="text/javascript"></script>
+    <script src="javascript/jsnative.js" type="text/javascript"></script>
+
+<!--include select2 plugins -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script> -->
+
+    <!-- <link href="//core/thirdparty/select2/css/select2-bootstrap.min.css" rel="stylesheet" />
+    <script src="//core/thirdparty/select2/js/select2.full.min.js"></script> -->
+
+    <!-- <link href="//core/thirdparty/select2/css/select2.min.css" rel="stylesheet" />
+    <script src="//core/thirdparty/select2/js/select2.min.js"></script> -->
+
+
+        <link href="css/bootstrap-custom.css" rel="stylesheet" type="text/css">
+    <link href='css/login.css' rel='stylesheet' type='text/css'><link href='css/login-fairview.css' rel='stylesheet' type='text/css'>    <link rel="icon" href="images/nuis/_nulogo.png">
+    <script>
+        if (top.location != location)
+        {
+            top.location.href = document.location.href ;
+        }
+
+        $(document).ready(function(){
+            $(document).click(function(e){
+                if(e.target.closest("#td-profile-header") || e.target.closest("#div-user-detail")){
+                    $("#div-user-detail").css("display","block");
+                }else{
+                    $("#div-user-detail").css("display","none");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+
+    <div class="form-body">
+        <div class="campus-logo">
+            <div class="logo">
+                <img class="img img-responsive logo-size" src="images/logo/fairview/nuis-white-shadow.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <!--<div class="logo">
+                        <img class="img img-responsive logo-size" src="" alt="">
+                    </div>-->
+                    <div class="feature media">
+                        <div class="media-left">
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                        </div>
+                        <div class="media-body">
+                            <span class="lead">Easy to use.</span>
+                            <span class="subtext">You don't need to be a techie or should have an advanced knowledge in order
+                            to do or get what you need. You can manage as you go along!</span>
+                        </div>
+                    </div>
+                    <div class="feature media">
+                        <div class="media-left">
+                            <span class="glyphicon glyphicon-flash"></span>
+                        </div>
+                        <div class="media-body">
+                            <span class="lead">Flexible.</span>
+                            <span class="subtext">Allowing users to collect and evaluate data to generate appropriate information and
+                                reports as needed, presenting information in the right amount of detail according to the level of management.</span>
+                        </div>
+                    </div>
+                    <div class="feature media">
+                        <div class="media-left">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="holder">
+                        <div class="form-items">
+                            <h3>Education that works.</h3>
+                            <p class="description">Login with your <img src="images/nuis/Office_365_logo.png" width="75px"> account to use and benefit from the services we offer.</p>
+                            <div class="page-links">
+                                <a data-form="login" class="active">Login</a>
+                                <a data-form="register">Register</a>
+                            </div>
+                            <form method="post">
+                                <input type=hidden id="active_tab" name="active_tab" value="login">
+<input type=hidden id="t" name="t" value="">
+                                <div id="login" class="form hidden">
+                                                                        <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </span>
+                                        <input id="username" type="text" class="form-control" name="username" value="" placeholder="Username / Email" required autocomplete="off">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+                                    </div>
+
+                                    <div class="form-button" href="#">
+                                        <button id="submit" type="submit" class="btn btn-warning" name="btn_submit" value="1"><i class="fa fa-sign-in-alt"></i> Login</button>
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </form>
+
+                            <form method="post">
+                                <div id="register" class="form hidden">
+                                                                        <div class="note">
+                                        <span class="label label-warning"><i class="fa fa-exclamation-circle"></i> NOTE</span>
+                                        <span class="small">To register, use your Office 365 email account and ID Number.</span>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-id-card-alt"></i></span>
+                                        <input id="id_number" type="text" class="form-control" name="id_number" placeholder="ID Number" value="" required>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="full_name" type="text" class="form-control" name="full_name" placeholder="First Name Last Name" value="" required>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-envelope"></i>
+                                        </span>
+                                        <input id="email_address" type="email" class="form-control" name="email_address" value="" placeholder="Email Address" required autocomplete="off">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="email_password" type="password" class="form-control" name="email_password" placeholder="Password" required>
+                                    </div>
+
+                                    <div class="form-button">
+                                        <button id="btn_register" type="submit" class="btn btn-success" name="btn_register" value="1">
+                                            <i class="fa fa-user-edit"></i> Register</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function(){
+        $(".page-links a").click(function(){
+            $(".page-links a").removeClass("active");
+            $(this).addClass("active");
+            $("form input").removeAttr("required");
+            $("div.form").addClass("hidden");
+
+            var f = $(this).data("form");
+            $("div#" + f).removeClass("hidden").find("input").attr("required","required");
+            $("input[name='active_tab']").val(f);
+            switch(f){
+                case "register":
+                    // $("[name='btn_submit']").attr("disabled","disabled");
+                    $(".footer-links").hide();
+                    break;
+                default:
+                    // $("[name='btn_submit']").removeAttr("disabled");
+                    $(".footer-links").show();
+            }
+        });
+
+        var active_tab = $("input[name='active_tab']").val();
+        if(active_tab){
+            $(".page-links a").each(function(){
+                if($(this).data("form") === active_tab){
+                    $(this).click();
+                }
+            })
+        }else{
+            $(".page-links a:first").click();
+        }
+    });
+</script>

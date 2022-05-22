@@ -1,0 +1,8 @@
+
+.form-body {
+    background-color: rgba(82, 186, 255, 1);
+    background-image: url(../images/logo/fairview/facade.jpg);
+    background-size: cover;
+    background-position: right bottom;
+    height: 100%;
+}

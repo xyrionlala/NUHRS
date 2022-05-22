@@ -1,0 +1,25 @@
+.alertify .ajs-dialog {
+    border: none;
+    border-radius: 0;
+}
+
+.alertify-notifier .ajs-message.ajs-success{
+    color: #000;
+    text-shadow: none;
+    background: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.alertify-notifier .ajs-message.ajs-error {
+    color: #fff;
+    background: #d9534f;
+    border-color: #d43f3a;
+    text-shadow: none;
+}
+
+.alertify-notifier .ajs-message.ajs-warning{
+    color: #000;
+    background: #f0ad4e;
+    border-color: #eea236;
+    text-shadow: none;
+}

@@ -1,0 +1,503 @@
+/*Fonts */
+@font-face {
+    font-family: "NU Font";
+    src: url("fonts/ClanOT-Book.otf");
+}
+
+@font-face {
+    font-family: "NU Font Bold";
+    src: url("fonts/ClanOT-Bold.otf");
+}
+
+@font-face {
+    font-family: "NU Font BoldItalic";
+    src: url("fonts/ClanOT-BoldItalic.otf");
+}
+
+@font-face {
+    font-family: "NU Font BookItalic";
+    src: url("fonts/ClanOT-BookItalic.otf");
+}
+
+/*Header & Footer*/
+html,body{
+    height:100%;
+}
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+.bootstrap-footer{
+    padding-top:10px;
+    padding-bottom:10px;
+    margin:0;
+}
+
+div.main-cobalt-container{
+    flex: 1 0 auto;
+}
+
+div.bootstrap-footer{
+    margin-top:20px;
+    flex-shrink: 0;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.throbber {
+    width: 94px;
+    height:94px;
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    z-index: 11000;
+}
+
+.throbber_screen_locker {
+    background-color: rgba(255, 255, 255, .6);
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10999;
+}
+
+table.borderless td, table.borderless th{
+    border: none!important;
+}
+
+/*Overwrite CSS of Nav Element */
+div.header{
+    background:#35408f;
+    padding: 10px;
+    padding-bottom:0;
+}
+
+div.header nav.navbar{
+    background:transparent;
+    border:none;
+    margin:0;
+    color:#fff;
+}
+
+div.header .navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+div.header .navbar-toggle:hover,
+div.header .navbar-toggle{
+    margin-right:0;
+    margin-top: 15px;
+    background:transparent;
+    border:none;
+}
+
+
+div.module-title{
+    background:#ffd41c;
+    padding:10px;
+    padding-left:15px;
+    color:#35408f;
+    font-weight:bold;
+}
+
+/*Nav Bar for Small Devices*/
+.main-navbar{
+    border:none;
+    border-radius:0;
+}
+
+.main-navbar button.navbar-toggle{
+    margin-top:28px;
+}
+
+.main-navbar a.navbar-brand{
+    height:80px;
+}
+
+.main-navbar #myNavbar .navbar-nav>li>a{
+    color:#fff;
+}
+
+/*Override Cobalt listview*/
+table.listView thead a{
+    color:#fff!important;
+}
+table.listView thead tr{
+    text-align:center;
+    font-weight: bold;
+}
+table.listView td.col-operations{
+    min-width:130px;
+}
+
+div.div-navigator hr{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+td.oper_col{
+    white-space: nowrap;
+}
+
+.radio-button-label{
+    font-weight:normal;
+}
+
+table.detailView tr td{
+    padding: 8px;
+}
+
+table.detailView tr td.text-success{
+    font-weight:bold;
+    padding-right:15px;
+}
+
+/*fix table-responsive class*/
+div.table-responsive{
+    overflow-x:initial;
+}
+
+div#ui-datepicker-div{
+    z-index: 5000!important;
+}
+
+.text-bold{
+    font-weight:bold;
+}
+
+div.btn-holder{
+    display:inline-block;
+    padding-top: 5px;
+}
+
+div.btn-holder ~ *{
+    padding-left:10px;
+}
+
+/*override DataTables*/
+div.dataTables_info,
+div.dataTables_length{
+    display:inline-block;
+}
+
+div.dataTables_paginate,
+div.dataTables_filter{
+    display:inline-block;
+    float: right;
+}
+
+.input-group-addon,
+.modal-content,
+.dropdown-menu,
+.nav-tabs>li>a,
+.popover,
+.alert,
+.form-control,
+.btn{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.selectize-input,
+.selectize-dropdown,
+.select2-container--default .select2-selection--single,
+.select2-dropdown{
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    border-radius: 0!important;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 21px;
+    border: 1px solid transparent;
+    border-radius: 0
+}
+
+.alert h4 {
+    margin-top: 0;
+    color: inherit
+}
+
+.alert .alert-link {
+    font-weight: bold
+}
+
+.alert > p, .alert > ul {
+    margin-bottom: 0
+}
+
+.alert > p + p {
+    margin-top: 5px
+}
+
+.alert-dismissable, .alert-dismissible {
+    padding-right: 35px
+}
+
+.alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit
+}
+
+.alert-success {
+    color: #ffffff;
+    background-color: #43ac6a;
+    border-color: #3c9a5f
+}
+
+.alert-success hr {
+    border-top-color: #358753
+}
+
+.alert-success .alert-link {
+    color: #e6e6e6
+}
+
+.alert-info {
+    color: #ffffff;
+    background-color: #5bc0de;
+    border-color: #3db5d8
+}
+
+.alert-info hr {
+    border-top-color: #2aabd2
+}
+
+.alert-info .alert-link {
+    color: #e6e6e6
+}
+
+.alert-warning {
+    color: #ffffff;
+    background-color: #e99002;
+    border-color: #d08002
+}
+
+.alert-warning hr {
+    border-top-color: #b67102
+}
+
+.alert-warning .alert-link {
+    color: #e6e6e6
+}
+
+.alert-danger {
+    color: #ffffff;
+    background-color: #f04124;
+    border-color: #ea2f10
+}
+
+.alert-danger hr {
+    border-top-color: #d32a0e
+}
+
+.alert-danger .alert-link {
+    color: #e6e6e6
+}
+
+.alert .alert-link {
+    font-weight: normal;
+    color: #fff;
+    text-decoration: underline
+}
+
+
+/*for custom checkbox & radio button*/
+label.cb-container {
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 35px;
+    padding-right:15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+label.cb-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+span.cb-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+label.cb-container:hover input ~ span.cb-checkmark {
+    background-color: #ccc;
+}
+
+label.cb-container input:checked ~ span.cb-checkmark {
+    background-color: #2196F3;
+}
+
+span.cb-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+label.cb-container input:checked ~ span.cb-checkmark:after {
+    display: block;
+}
+
+label.cb-container span.cb-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*custom radio */
+label.radio-container {
+    display: inline-block;
+    font-weight:normal;
+    position: relative;
+    padding-left: 25px;
+    padding-right:15px;
+    padding-top:5px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+label.per-line{
+    display: block;
+}
+
+label.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+span.radio-checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+label.radio-container:hover input ~ span.radio-checkmark {
+    background-color: #ccc;
+}
+
+label.radio-container input:checked ~ span.radio-checkmark {
+    background-color: #2196F3;
+}
+
+span.radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+label.radio-container input:checked ~ span.radio-checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+label.radio-container span.radio-checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/*datatable button padding*/
+.dataTables_wrapper div.btn-group{
+    display: inline;
+}
+
+.dataTables_wrapper div.toolbar{
+    display: inline;
+}
+
+.dataTables_wrapper div.btn-group button{
+    margin-right: 10px;
+}
+
+.float-right {
+    float: right;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .main-navbar .navbar-header {
+        float: none;
+    }
+    .main-navbar .navbar-toggle {
+        display: block;
+    }
+    .main-navbar .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .main-navbar .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .main-navbar .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .main-navbar .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .main-navbar .navbar-nav>li {
+        float: none;
+    }
+    .main-navbar .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .pageHeaderDiv{
+        padding-top:0;
+    }
+}
+
+@page {
+    size: auto;
+}
+@media print {
+    a[href]:after {
+        content: none
+    }
+}
+
